@@ -1,7 +1,7 @@
 @chartset "UTF-8";
 
 @mixin flex($directon:column,$inline:block){
-	display: if($inline === block , flex,inline-flex);
+	display: if($inline == block , flex,inline-flex);
 	flex-derection:$derection;
 	flex-wrap:wrap;
 }

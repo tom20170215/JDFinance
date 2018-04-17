@@ -1,8 +1,8 @@
-<template>
+<template lang="html">
 	<article class="">
 		<Slider :items="items" :cname="$style.slider"/>
 		<section :class="$style.list">
-			<div class="item" v-for="item in enters" :key="item.img">
+			<div :class="$style.item" v-for="item in enters" :key="item.img">
 				<router-link :to="{name:'item.href'}">
 					<img :src="	item.img" :alt="item.title">
 					<h4>{{item.title}}</h4>
@@ -15,8 +15,6 @@
 <script>
 import Slider from '../core/slider.vue';
 export default {
-
-  name: 'hslider',
 
   data () {
     return {
@@ -67,6 +65,9 @@ export default {
 	@import "../../css/element.scss";
 	.slider{
 		margin-top:120px;
+		img{
+			width:100%;
+		}
 	}
 	.list{
 		@include list(row);

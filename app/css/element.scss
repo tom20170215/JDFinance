@@ -19,19 +19,19 @@
 }
 
 
-@mixin panel($bgcolor:#fff,$padding:0,$margin:20px 0,$height:112px,$txtPdding:0 32px,$color:#333,$fontSize:32px){
+@mixin panel($bgcolor:#fff,$padding:0,$margin:20px 0,$height:112px,$txtPading:0 32px,$color:#333,$fontSize:32px){
 	background:$bgcolor;
 	padding:$padding;
 	margin:$margin;
 	>h4{
 		height:$height;
 		line-height:$height;
-		padding:$txtpadding;
+		padding:$txtPading;
 		white-space:nowrap;
 		overflow:hidden;
 		text-align:center;
 		color:$color;
-		font-size:$fontsize;
+		font-size:$fontSize;
 	}
 }
 

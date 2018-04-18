@@ -50,6 +50,14 @@ export default {
 			@include list(row);
 			.item{
 				width:50%;
+				box-sizing:border-box;
+				&:first-child{
+					padding:32px 20px;
+					text-align:center;
+				}
+				h4{
+					font-size:26px;
+				}
 			}
 		}
 	}

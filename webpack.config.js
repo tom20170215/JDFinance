@@ -11,7 +11,8 @@ module.exports = env => {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({template: './app/views/index.html'}),
     new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin()
   ];
   if(env.production){
     plugins.push(

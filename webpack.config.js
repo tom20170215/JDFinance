@@ -31,14 +31,14 @@ module.exports = env => {
       ],
     devServer: {
       contentBase: './dist',
-      hot: true,
+      // hot: true,
       compress: true,
       port: 9000,
-      clientLogLevel: "none",
-      quiet: true
+      // clientLogLevel: "none"
+      // quiet: true
     },
     module: {
-      loaders: [
+      rules: [
         {
           test: /\.html$/,
           loader: 'html-loader'
@@ -62,6 +62,12 @@ module.exports = env => {
         }, {
           test: /\.scss$/,
           loader: 'style-loader!css-loader!sass-loader'
+        },{
+          test:/\.js$/,
+          use:{
+            loader:"babel-loader"
+          },
+          exclude:/node_modules/
         }
       ]
     },

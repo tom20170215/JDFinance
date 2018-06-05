@@ -2,11 +2,6 @@
     <div>
         <Heador/>
         <Slider/>	
-        <Ada/>
-        <Money/>
-        <Adb/>
-        <Finance/>
-		<Adc/>
         <Footer cname="mfooter"/>
         <Navbar/>
     </div>
@@ -16,21 +11,11 @@
 import Heador from '../public/header.vue';
 import Footer from '../public/footer.vue';
 import Navbar from '../public/navbar.vue';
-import Slider from './mslider.vue';
-import Ada from './ada.vue';
-import Money from './money.vue';
-import Adb from './adb.vue';
-import Finance from './finance.vue';
-import Adc from './adc.vue';
+import Slider from './rslider.vue';
 export default {
 	components:{
 		Heador,
 		Slider,
-		Ada,
-		Money,
-		Adb,
-		Finance,
-		Adc,
 		Footer,
 		Navbar,
 

@@ -9,6 +9,22 @@
 				</div>
 				<em>去赚钱 ></em>
 			</div>
+			<div :class="$style.item">
+				<img src="//img12.360buyimg.com/jrpmobile/jfs/t3679/44/511862277/2728/c1c6b2bf/580d8189N6b6f8052.png?width=76&height=76" alt="">
+				<div>
+					<h4>季度理财</h4>
+					<p>预期年化收益率5.50%</p>
+				</div>
+				<em>去赚钱 ></em>
+			</div>
+			<div :class="$style.item">
+				<img src="//img12.360buyimg.com/jrpmobile/jfs/t3331/69/580199498/3074/d5bb21c5/580d7f6cN7f35e596.png?width=76&height=76" alt="">
+				<div>
+					<h4>一年理财</h4>
+					<p>预期年化收益率6.50%</p>
+				</div>
+				<em>去赚钱 ></em>
+			</div>									
 		</section>
 	</Panel>
 </template>
@@ -32,13 +48,49 @@ export default {
 	@import "../../css/element.scss";
 	.panel{
 		@include panel;
+		>h4{
+			border-bottom:1px solid #ddd;
+		}
 		.content{
 			@include flex;
 			.item{
 			@include flex(row);
+			align-items:center;
+			height:140px;
+			&:after{
+				content:"";
+				box-sizing:border-box;
+				height:0;
+				width:100%;
+				border-bottom:1px solid #ddd;
+				margin-left:155px;
+			}
+			&:last-child:after{
+				border-color:#fff;
+			}
 			>img{
-				width:80px;
-				height:88px;
+				width:88px;
+				height:88px; 
+				display:inline-block;
+				margin:0 32px;
+			}
+			>div{
+				font-size:32px;
+				color:#333;
+				line-height:1.8;
+				width:334px;
+				p{
+					color:#ff3232;
+					font-size:24px;
+					line-height:1.1;
+					white-space:nowrap;
+					text-overflow:ellipsis;
+					overflow:hidden;
+				}
+			}
+			>em{
+				font-size:28px;
+				color:#FF801A;
 			}
 			}
 		} 

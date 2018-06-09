@@ -1,9 +1,9 @@
 <template>
 	<Panel title="我的" :class="$style.panel">
 		<ul :class="$style.content">
-			<li :class="$style.item" v-for="item in items" :key="item.img">
-				<div>我的资产</div>
-				<span>查看全部资产 ></span>
+			<li :class="$style.item" v-for="item in items" :key="item.content">
+				<div :style="{background:'url(' + item.img + ') no-repeat top left'}">{{item.content}}</div>
+				<span>{{item.msg}}</span>
 			</li>
 		</ul>
 	</Panel>
@@ -27,11 +27,11 @@ export default {
     		content:"我的优惠券",
     		msg:"查看全部 >",
     	},{
-    		img:"//img12.360buyimg.com/jrpmobile/jfs/t10264/48/2521964269/2177/cb479501/59f945edNc1197b64.png?width=90&height=90",
+    		img:"//img12.360buyimg.com/jrpmobile/jfs/t8014/149/2344686222/2102/341ff316/59cb616bN3e1bd87d.png?width=70&height=70",
     		content:"我的金币",
     		msg:"赚金币兑好物 >",    		
     	},{
-    		img:"//img12.360buyimg.com/jrpmobile/jfs/t12115/250/469950434/3906/ad97c994/5a0bdf3aN22efb724.png?width=90&height=90",
+    		img:"//img12.360buyimg.com/jrpmobile/jfs/t9649/171/293125950/1453/4cf0cc2/59cb6162N9c71da0f.png?width=70&height=70",
     		content:"我的金条",
     		msg:"查看额度 >",    		
     	},{
@@ -71,18 +71,22 @@ export default {
 				align-items:center;
 				height:112px;
 				>div{
+					width:170px;
 					height:70px;
 					line-height:70px;
 					font-size:32px;
 					color:#333;
 					font-family:PingFangSC-Medium;
-					background:url("//img12.360buyimg.com/jrpmobile/jfs/t8971/199/1863233880/2035/56d04776/59cb5fbdNa7c682c3.png?width=70&height=70") no-repeat top left;
-					text-align:center;
+					text-align:left;
 					padding-left:100px;
 				}
 				>span{
 					font-size:28px;
 					color:#999;
+					width:200px;
+					height:112px;
+					line-height:112px;
+					text-align:right;
 				}
 			}
 		}

@@ -58,19 +58,27 @@ export default {
 				}
 				h4{
 					font-size:26px;
-          line-height:40px;
-          .red{
-            color:#f00;
-          }
+          			line-height:40px;
+          			.red{
+            			color:#f00;
+         			 }
 				}
-        .gray{
-          font-size:24px;
-          color:#999;
-        }
-        p{
-           margin-top:6px;
-           font-size:24px;
-        }
+        		.gray{
+          			font-size:24px;
+          			color:#999;
+        		}
+        		p{
+           			margin-top:6px;
+           			font-size:24px;
+        		}
+        		&:first-child{
+        			img{
+        				width:132px;
+        				height:132px;
+        				margin-top:20px;
+        			}        			
+        		}
+
         ul{
           width:100%;
           li{

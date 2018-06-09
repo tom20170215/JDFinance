@@ -5,13 +5,14 @@ import Money from "../money/index.vue"
 import Ious from "../ious/index.vue"
 import Raise from "../raise/index.vue"
 import Me from "../me/index.vue"
+import Download from "../special/download.vue"
 
 Vue.use(Router)
 
 export default new Router({
     routes: [
         {
-            path: "/",
+            path: "/home",
             name: "home",
             component: Home,
         },{
@@ -30,6 +31,10 @@ export default new Router({
             path:"/me",
             name:"me",
             component:Me,
+        },{
+            path:"/download",
+            name:"download",
+            component:Download,
         }
     ],
 })

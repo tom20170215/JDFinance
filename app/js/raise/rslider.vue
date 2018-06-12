@@ -44,7 +44,7 @@ export default {
 			height:72px;
 			line-height:72px;
 			overflow:hidden;
-			background:url("//m.jr.jd.com/spe/qyy/main/images/scroll_title_img.png") left top no-repeat;
+			background:url("//m.jr.jd.com/spe/qyy/main/images/scroll_title_img.png") left 50% no-repeat;
 			padding-left:166px;
 		}
 	}

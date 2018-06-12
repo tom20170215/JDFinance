@@ -33,7 +33,7 @@ export default {
 			padding-bottom:40px;
 			position:relative;
 			img{
-				width:320px;
+				width:50%;
 				height:136px;
 			}
 			p{

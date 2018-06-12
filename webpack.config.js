@@ -11,7 +11,13 @@ module.exports = env => {
   let plugins = [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      template: './app/views/index.html'
+      template: './app/views/index.html',
+      minify:{
+        removeAttributeQuotes:true,
+        collapseWhitespace:true,
+        removeComments:true
+      },
+      favicon:"./static/favicon.ico"
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),//热更新
@@ -21,7 +27,7 @@ module.exports = env => {
       new webpack.DefinePlugin({
         'process.env': {
           NODE_ENV: '"production"'
-        } //json格式
+        } 
       }),
       new ExtractTextPlugin("style.css", {
         ignoreOrder: true
@@ -34,16 +40,19 @@ module.exports = env => {
   return {
     entry: [
       './app/js/main.js',
-      './app/js/viewport.js'
+      './app/js/viewport.js'//入口文件
     ],
     devtool: 'source-map',
     devServer: {
       contentBase: './dist',
       compress: true,
       port: 9000,
+      host:"192.168.20.153"
     },
+    //模块配置
     module: {
       rules: [{
+        //模块规则
         test: /\.html$/,
         loader: 'html-loader'
       }, {
@@ -86,13 +95,14 @@ module.exports = env => {
         '.js', '.vue', '.json'
       ], //使用的扩展名
       alias: {
+      //模块别名列表
         'vue$': 'vue/dist/vue.esm.js'
       } //指定完整版的vue版本
     },
-    plugins,
+    plugins,//插件
     output: {
-      filename: '[name].min.js',
-      path: path.resolve(__dirname, 'dist')
+      filename: '[name].min.js',//多个入口文件生成对应的文件名
+      path: path.resolve(__dirname, 'dist')//所有输出文件的目标路径，必须是绝对路径
     }
   };
 };

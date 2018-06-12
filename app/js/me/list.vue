@@ -2,7 +2,7 @@
 	<Panel title="我的" :class="$style.panel">
 		<ul :class="$style.content">
 			<li :class="$style.item" v-for="item in items" :key="item.content">
-				<div :style="{background:'url(' + item.img + ') no-repeat top left'}">{{item.content}}</div>
+				<div :style="{background:'url(' + item.img + ') no-repeat left center'}">{{item.content}}</div>
 				<span>{{item.msg}}</span>
 			</li>
 		</ul>
@@ -72,8 +72,8 @@ export default {
 				height:112px;
 				>div{
 					width:170px;
-					height:70px;
-					line-height:70px;
+					height:112px;
+					line-height:112px;
 					font-size:32px;
 					color:#333;
 					font-family:PingFangSC-Medium;
